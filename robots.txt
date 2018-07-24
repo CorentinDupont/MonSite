@@ -1,0 +1,18 @@
+User-agent: Mediapartners-Google
+Crawl-delay: 120
+Disallow:
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: *
+disallow:*.html
+Disallow:*.js
+Disallow:*.css
+Disallow:/images
+Disallow:/slick
+Disallow:/html/admin
+Disallow:/php/admin
+Disallow:/php/site/article_content_loading.php
+Disallow:/php/site/articles_loading.php
+Disallow:/php/site/header.php
