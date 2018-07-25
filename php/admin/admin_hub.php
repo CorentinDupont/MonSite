@@ -16,7 +16,7 @@
 
 
     <body>
-        <div id="adminHub">
+        <div class="pageBody" id="adminHub">
             <h1>Bienvenue dans votre espace personnel, Corentin !</h1>
             <section id="allOptions">
                 <article class="option" id="article">

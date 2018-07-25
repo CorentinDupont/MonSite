@@ -12,7 +12,7 @@
         <?php 
             include('../../php/site/header.php');
         ?>
-        <div id="adminConnection">
+        <div class="pageBody" id="adminConnection">
              <h1>Prouve ta sagesse et ton courage jeune héros...</h1>
             <form id="connectionBlock" action="admin_transition.php" method="post">
                 <div id="formContent">

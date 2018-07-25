@@ -17,7 +17,7 @@
     ?>
 
     <body>
-        <div id="newArticle">
+        <div class="pageBody" id="newArticle">
             <!-- form for all informations -->
             <form action="#" method="post" enctype="multipart/form-data">
                 <section id="titleBlock">

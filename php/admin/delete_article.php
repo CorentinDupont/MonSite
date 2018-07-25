@@ -15,7 +15,7 @@
         $_SESSION['isConnected']=false;
     ?>
     <body>
-        <div id="deleteArticle">
+        <div class="pageBody" id="deleteArticle">
             <section id="titleBlock">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="432.544px" height="432.544px" viewBox="0 0 432.544 432.544" style="enable-background:new 0 0 432.544 432.544;"

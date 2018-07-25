@@ -10,7 +10,7 @@
     ?>
 
     <body>
-        <div id="inDevelopment">
+        <div class="pageBody" id="inDevelopment">
             <section>
                 <img src="../../images/toonLinkWtfFace.png"/>
                 <p>Ouuuups ! ...</p>

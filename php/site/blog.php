@@ -12,7 +12,7 @@
     ?>
 
 <body>
-  <div id="blog">
+  <div class="pageBody" id="blog">
     <section id="filtre">
       <article id="filterContentBlock">
         <!--<label class="switch">

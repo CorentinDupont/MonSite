@@ -11,8 +11,6 @@ body {
   margin: 0px;
   width: 100%;
   height:100%;
-  display:flex;
-  flex-direction:column;
 }
 
 * {
@@ -30,6 +28,14 @@ a {
   text-decoration: none;
 }
 
+.pageBody {
+  background-color: #f2e1c3;
+  display: flex;
+  flex-direction: column;
+  min-height:calc(100% - 60px);
+  padding-top:56px;
+}
+
 /*************************************************************/
 
 /*                           HEADER                          */
@@ -37,6 +43,8 @@ a {
 /*************************************************************/
 
 header {
+  position: fixed;
+  top:0;
   display: flex;
   width: 100%;
   background-color: #362916;
@@ -174,8 +182,7 @@ footer #adminLink:hover {
   background-color: #f2e1c3;
   display: flex;
   flex-direction: column;
-  flex-grow:1;
-  /* min-height:calc(100% - 6.9vw); */
+  min-height:calc(100% - 60px);
 }
 
 #blog #allArticles {
@@ -311,7 +318,7 @@ footer #adminLink:hover {
 
 #adminHub {
   background-color: #f2e1c3;
-  min-height: calc(100% - 6.9vw);
+  min-height: calc(100% - 60px);
 }
 
 #adminHub h1 {
@@ -410,7 +417,7 @@ footer #adminLink:hover {
   flex-direction: column;
   align-items: center;
   background-color: #f2e1c3;
-  min-height: calc(100% - 6.9vw);
+  min-height: calc(100% - 60px);
 }
 
 #newArticle section {
@@ -777,7 +784,7 @@ footer #adminLink:hover {
 #deleteArticle {
   padding: 0 25vw;
   background-color: #f2e1c3;
-  min-height: calc(100% - 9.7vw);
+  min-height: calc(100% - 60px);
 }
 
 #deleteArticle section,
@@ -956,6 +963,8 @@ footer #adminLink:hover {
 #articleBody {
   background-color: #f2e1c3;
   padding: 0 20vw;
+  min-height: calc(100% - 60px);
+  padding-top:56px;
 }
 
 #articleBody #sheet {
@@ -1023,7 +1032,7 @@ footer #adminLink:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100% - 3.9vw - 3vw);
+  height: calc(100% - 60px);
 }
 
 #inDevelopment section {
@@ -1091,7 +1100,7 @@ footer #adminLink:hover {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: calc(100% - 3.9vw - 3vw);
+  height: calc(100% - 60px);
 }
 
 #adminConnection h1 {

@@ -14,7 +14,7 @@
         include('../../php/site/header.php');
     ?>
     <body>
-        <div id="articleBody">
+        <div class="pageBody" id="articleBody">
             <section id="sheet">
                 <?php 
                     include('../../php/site/article_content_loading.php');
