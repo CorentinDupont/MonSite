@@ -5,7 +5,7 @@ var heightBar = $("#blog #filtre #bar").height();
 //    var heightFilterContentBlock = $("#blog #filtre #filterContentBlock").height();
 //}
 
- var heightFilterContentBlock = "4.5vw"
+ var heightFilterContentBlock = "60px"
 
 
 //$("#blog #filtre").css("transform": "translate(calc(100% - "+heightBar+"))");

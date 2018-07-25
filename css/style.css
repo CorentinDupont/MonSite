@@ -188,14 +188,16 @@ footer #adminLink:hover {
 #blog #allArticles {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0 0 6vw 0;
+  justify-content: space-evenly;
+  padding:0 100px;
 }
 
 #blog #allArticles a {
-  width: 42%;
-  margin-top: 6vw;
-  box-shadow: 0px 0px 6px 0px #656565;
+  width: 500px;
+  margin: 0 10px;
+  margin-top: 50px;
+  box-shadow: 0px 20px 40px 0px #00000022;
+  border-radius:6px;
 }
 
 #blog #allArticles a h2 {
@@ -203,9 +205,10 @@ footer #adminLink:hover {
   text-align: center;
   background-color: #21190e;
   color: #f2e1c3;
-  padding: 1.1vw;
-  font-size: 1.5vw;
+  padding: 20px;
+  font-size: 16px;
   font-weight: normal;
+  border-radius:6px 6px 0 0;
 }
 
 #blog #allArticles a .articleBody {
@@ -213,9 +216,10 @@ footer #adminLink:hover {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 16vw;
+  height: 200px;
   position: relative;
   background-color: #D9CAAF;
+  border-radius: 0 0 6px 6px;
 }
 
 #blog #allArticles a .articleBody .articleImageBlock {
@@ -238,7 +242,7 @@ footer #adminLink:hover {
   color: #21190e;
   padding: 5%;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 16px;
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 0.6s;
@@ -251,6 +255,9 @@ footer #adminLink:hover {
 /*---------------------- FILTRE ----------------------*/
 
 #blog #filtre {
+  position:fixed;
+  width:100%;
+  z-index:10;
   /*transform: translate(0);*/
 }
 
@@ -270,16 +277,16 @@ footer #adminLink:hover {
   align-items: center;
   align-content: center;
   justify-content: space-around;
-  font-size: 1vw;
+  font-size: 16px;
   color: #21190e;
 }
 
 #blog #filtre #bar #barContentBlock>* {
-  margin: 0.2vw;
+  margin:4px;
 }
 
 #blog #filtre #bar #barContentBlock svg {
-  width: 1.2vw;
+  height: 16px;
   transform: rotate(0);
   transition-property: transform;
   transition-duration: 0.3s;
@@ -290,7 +297,7 @@ footer #adminLink:hover {
   background-color: #D0A557;
   display: flex;
   justify-content: space-around;
-  height: 0vw;
+  height: 0px;
   align-items: center;
   transition-property: height;
   transition-duration: 0.5s;
