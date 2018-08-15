@@ -1010,9 +1010,10 @@ footer #adminLink:hover {
   align-self: flex-end;
   display: flex;
   align-items: center;
-  color: transparent;
-  border:solid 1px #aaa;
+  background-color: white;
+  /* border:solid 1px #aaa; */
   padding:10px 20px;
+  margin: 20px 0 0 0;
 }
 
 #articleBody #sheet #authorBlock #authorImageContainer {
@@ -1050,15 +1051,15 @@ footer #adminLink:hover {
 }
 
 #inDevelopment section {
-  background-color: #21190e;
+  background-color: #F4F4F4;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vw;
-  color: white;
-  font-size: 1vw;
-  border-style: solid;
-  border-radius: 0.6vw;
+  padding: 20px;
+  color: #202020;
+  font-size: 14px;
+  /* border: solid 1px #4E7EFF; */
+  border-radius:6px;
   animation-duration: 0.8s;
   animation-name: inDevFadeIn;
 }
@@ -1073,30 +1074,27 @@ footer #adminLink:hover {
 }
 
 #inDevelopment section>* {
-  margin: 0.4vw;
+  margin: 10px;
 }
 
-#inDevelopment section img {
-  margin-bottom: 2vw;
-  width: 11vw;
+#inDevelopment section svg {
+  margin-bottom: 20px;
+  width: 60px;
+  fill:#4E7EFF;
 }
 
 #inDevelopment section p:nth-child(2) {
-  margin-bottom: 2vw;
+  margin-bottom: 20px;
 }
 
 #inDevelopment section p a {
-  color: #362916;
-  background-color: #fac23b;
-  padding: 0.4vw 1vw;
-  border-style: solid;
-  border-radius: 1.5vw;
-  transition-property: background-color;
+  color: #658EFF;
+  transition-property: color;
   transition-duration: 0.3s;
 }
 
 #inDevelopment section p a:hover {
-  background-color: #e1ae35;
+  color: #9BB6FF;
 }
 
 /*************************************************************/

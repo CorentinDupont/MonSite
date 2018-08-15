@@ -37,7 +37,7 @@ array_reverse($dateElements);
 $realDate = $dateElements[0].'/'.$dateElements[1].'/'.$dateElements[2];
 echo'<article id="authorBlock">
         <div id="authorImageContainer">
-            <img src="../../images/profil.png"/>
+            <img src="../../images/CorentinDupontPhotoProfil_bg_light_blue.png"/>
         </div>
         <p>'.$allArticleDatas[2].', '.$realDate.'</p>
     </article>';
