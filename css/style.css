@@ -324,51 +324,73 @@ footer #adminLink:hover {
 #adminHub {
   background-color: white;
   min-height: calc(100% - 60px);
+  display:flex;
+  flex-direction: row;
 }
 
-#adminHub h1 {
-  width: 100%;
-  text-align: center;
-  font-size: 1.5vw;
-  color: #21190e;
-  padding: 5vw;
+#adminHub #sheikahIconBlock{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:50%;
+}
+
+#adminHub #sheikahIconBlock svg{
+  fill:#EFEFEF;
+  width:300px;
+}
+
+#adminHub #rightPanel{
+  width:50%;
+  padding:60px;
 }
 
 #adminHub #allOptions {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 5vw;
+  margin-top:20px;
+  padding:-6px;
 }
 
 #adminHub #allOptions .option {
   position: relative;
   overflow: hidden;
-  background-color: #21190e;
+  background-color: #9BB6FF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fac23b;
+  color: white;
   font-size: 1.6vw;
-  height: 20vw;
-  width: 20vw;
+  height: 200px;
+  width: 200px;
+  border-radius:6px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  margin:6px;
 }
 
-#adminHub #allOptions .option:nth-child(2n) {
-  background-color: #362916;
+#adminHub #allOptions .option:hover{
+  background-color:#658EFF;
+  cursor:pointer;
 }
+
+/* #adminHub #allOptions .option:nth-child(2n) {
+  background-color: #362916;
+} */
 
 #adminHub #allOptions .option svg {
-  fill: #fac23b;
-  height: 7vw;
+  fill: white;
+  height: 60px;
 }
 
 #adminHub #allOptions .option p[class="optionName"] {
-  margin-top: 17%;
+  font-size: 16px;
+  margin-top:20px;
 }
 
-#adminHub #allOptions .option .optionHover {
+/*#adminHub #allOptions .option .optionHover {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -407,7 +429,7 @@ footer #adminLink:hover {
 #adminHub #allOptions .option .optionHover button:hover {
   background-color: #d9caaf;
   cursor: pointer;
-}
+} */
 
 /*************************************************************/
 
