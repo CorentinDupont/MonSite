@@ -1110,71 +1110,74 @@ footer #adminLink:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: calc(100% - 60px);
 }
 
-#adminConnection h1 {
-  font-size: 1.6vw;
-  margin-top: -40vh;
-}
-
 #adminConnection form {
   position: relative;
-  width: 20vw;
-  margin-top: -100vh;
+  width: 400px;
+  background-color: #F4F4F4;
+  border-radius:6px;
+}
+
+/* #adminConnection form h1 {
+  font-size: 18px;
+  font-weight:normal;
+  margin-bottom:20px;
+} */
+
+#adminConnection form svg {
+  width:140px;
+  fill:#4E7EFF;
+  margin:40px 0 60px 0;
 }
 
 #adminConnection #formContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vw 2vw;
+  padding: 20px;
   width: 100%;
-  background-color: white;
-  color: #21190e;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 1px 1px 5px 0px #656565;
+  color: #202020;
 }
 
 #adminConnection #formContent article {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 1vw;
-  font-size: 0.85vw;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 #adminConnection #formContent article input {
-  border-style: solid;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 1.6vw;
-  margin-top: 0.2vw;
-  font-size: 1vw;
+  border-style: none;
+  background-color:white;
+  border-radius:6px;
+  height: 30px;
+  margin-top: 4px;
+  font-size: 14px;
   font-family: 'Raleway', sans-serif;
-  padding: 0.1vw;
+  padding: 2px 6px;
 }
 
 #adminConnection #formContent button {
   font-family: 'Raleway', sans-serif;
-  background-color: #362916;
-  color: #d9caaf;
-  padding: 0.5vw 1vw;
-  font-size: 0.7vw;
+  background-color: #4E7EFF;
+  color: white;
+  padding: 10px 20px;
+  font-size: 12px;
   border-style: solid;
-  border-radius: 0.5vw;
-  margin-top: 1vw;
-  transition-property: background-color, color;
+  border-radius: 20px;
+  margin: 80px 0 16px 0;
+  transition-property: background-color;
   transition-duration: 0.3s;
+  width:50%;
 }
 
 #adminConnection #formContent button:hover {
-  background-color: #fac23b;
-  color: #362916;
+  background-color: #658EFF;
   cursor: pointer;
 }
 
