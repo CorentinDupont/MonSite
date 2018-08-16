@@ -133,8 +133,12 @@
             <button type="button" class="deleteButton">x</button>
           </div>
 
+
+
+
+
           <!-- <div class="addImageBlock" id="addImageBlock_2">
-            <label for="image2">
+              <label for="image2">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
                 <g>
@@ -156,26 +160,55 @@
             <input id="image2" name="image2" type="file" />
 
           </div>
+
+
+
           <div class="imageBlock" id="imageBlock_2">
             <img src="../../images/fondArticleTemp2.jpg" />
             <button type="button" class="deleteButton">x</button>
             <label for="editImage2">change</label>
             <input id="editImage2" name="editImage2" type="file" />
           </div>
-        </article> -->
+
+
+
+        -->
+
+
+
+          <!-- <div class="addH2Block" id="addH2Block_1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="8842.593 -2291.594 64.786 53.594">
+              <g id="h2" transform="translate(8842 -2338.26)">
+                <path id="Tracé_28" data-name="Tracé 28" class="cls-1" d="M2.593-21.167H6.257V-5.786H24.929V-21.167h3.665V15.5H24.929V-2.2H6.257V15.5H2.593ZM38.965-9.7H35.45a12.592,12.592,0,0,1,3.627-8.907,11.658,11.658,0,0,1,8.588-3.483,10.822,10.822,0,0,1,8.189,3.267,10.774,10.774,0,0,1,3.129,7.706,12.014,12.014,0,0,1-1.492,5.849A42.1,42.1,0,0,1,51.7,2.127l-9.135,9.837H59.481V15.5h-24.9L48.587.362a45.243,45.243,0,0,0,5.547-6.774,9.118,9.118,0,0,0,1.284-4.653,7.16,7.16,0,0,0-2.306-5.327,7.809,7.809,0,0,0-5.646-2.233,7.907,7.907,0,0,0-5.846,2.343A10.074,10.074,0,0,0,38.965-9.7Z"
+                  transform="translate(-2 68.757)" />
+                <path id="Tracé_29" data-name="Tracé 29" class="cls-1" d="M0,112.189H64.379v4.024H0Zm0,8.047H44.26v4.024H0Z" transform="translate(1 -24)"
+                />
+              </g>
+            </svg>
+            <p>Sub Title</p>
+            <button type="button" class="deleteButton">x</button>
+          </div>
+          <div class="h2Block" id="h2Block_1">
+            <input type="text" name="subtitleInput1" />
+            <button type="button" class="deleteButton">x</button>
+          </div> -->
+
+          
+        </article>
 
       </section>
       <button id="postArticleSubmit" type="button">Poster l'article</button>
     </form>
     <div id="actionButtonBlock">
-      <svg id="addTextButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+      <svg id="addTextButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
         <g>
-          <path d="M0,80h512v32H0V80z M0,144h352v32H0V144z M0,208h512v32H0V208z M0,272h352v32H0V272z M0,336h512v32H0V336z M0,400h352v32H0V400z" />
+          <path d="M0,80h512v32H0V80z M0,144h352v32H0V144z M0,208h512v32H0V208z M0,272h352v32H0V272z M0,336h512v32H0V336z M0,400h352v32H0V400z"
+          />
         </g>
       </svg>
-      <svg id="addImageButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+      <svg id="addImageButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
         <g>
           <path d="M57,6H1C0.448,6,0,6.447,0,7v44c0,0.553,0.448,1,1,1h56c0.552,0,1-0.447,1-1V7C58,6.447,57.552,6,57,6z M56,50H2V8h54V50z"
           />
@@ -186,6 +219,14 @@
                 l-4.807-4.807l9.181-10.054l11.261,10.323c0.407,0.373,1.04,0.345,1.413-0.062c0.373-0.407,0.346-1.04-0.062-1.413l-12-11
                 c-0.196-0.179-0.457-0.268-0.72-0.262c-0.265,0.012-0.515,0.129-0.694,0.325l-9.794,10.727l-4.743-4.743
                 c-0.374-0.373-0.972-0.392-1.368-0.044L6.339,44.249c-0.415,0.365-0.455,0.997-0.09,1.412C6.447,45.886,6.723,46,7,46z"
+          />
+        </g>
+      </svg>
+      <svg id="addH2Button" xmlns="http://www.w3.org/2000/svg" viewBox="8842.593 -2291.594 64.786 53.594">
+        <g id="h2" transform="translate(8842 -2338.26)">
+          <path id="Tracé_28" data-name="Tracé 28" class="cls-1" d="M2.593-21.167H6.257V-5.786H24.929V-21.167h3.665V15.5H24.929V-2.2H6.257V15.5H2.593ZM38.965-9.7H35.45a12.592,12.592,0,0,1,3.627-8.907,11.658,11.658,0,0,1,8.588-3.483,10.822,10.822,0,0,1,8.189,3.267,10.774,10.774,0,0,1,3.129,7.706,12.014,12.014,0,0,1-1.492,5.849A42.1,42.1,0,0,1,51.7,2.127l-9.135,9.837H59.481V15.5h-24.9L48.587.362a45.243,45.243,0,0,0,5.547-6.774,9.118,9.118,0,0,0,1.284-4.653,7.16,7.16,0,0,0-2.306-5.327,7.809,7.809,0,0,0-5.646-2.233,7.907,7.907,0,0,0-5.846,2.343A10.074,10.074,0,0,0,38.965-9.7Z"
+            transform="translate(-2 68.757)" />
+          <path id="Tracé_29" data-name="Tracé 29" class="cls-1" d="M0,112.189H64.379v4.024H0Zm0,8.047H44.26v4.024H0Z" transform="translate(1 -24)"
           />
         </g>
       </svg>

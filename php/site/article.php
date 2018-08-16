@@ -15,7 +15,7 @@
     ?>
     <body>
         <div class="pageBody" id="articleBody">
-            <section id="sheet">
+            <section id="sheet">              
                 <?php 
                     include('../../php/site/article_content_loading.php');
                 ?>

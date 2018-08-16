@@ -187,14 +187,15 @@ footer #adminLink:hover {
 #blog #allArticles {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   padding:0 100px;
+  margin: 80px 0;
 }
 
 #blog #allArticles a {
   width: 500px;
   margin: 0 10px;
-  margin-top: 80px;
+  margin-top: 20px;
   /* box-shadow: 0px 20px 40px 0px #00000022; */
   border-radius:6px;
 }
@@ -217,7 +218,7 @@ footer #adminLink:hover {
   width: 100%;
   height: 200px;
   position: relative;
-  background-color: #D9CAAF;
+  background-color: #F4F4F4;
   border-radius: 0 0 6px 6px;
 }
 
@@ -649,6 +650,35 @@ footer #adminLink:hover {
   z-index: -1;
 }
 
+/* ADD H2 BLOCK */
+
+#newArticle form #edition #sheet .addH2Block {
+  display: flex;
+  align-items: center;
+  background-color: #D49BFF;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  font-size: 14px;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+#newArticle form #edition #sheet .addH2Block:hover {
+  background-color: #C475FF;
+}
+
+#newArticle form #edition #sheet .addH2Block svg {
+  height: 18px;
+  margin-right: 10px;
+  fill: white;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
 /* TEXT BLOCK */
 
 #newArticle form #edition #sheet .textBlock {
@@ -674,6 +704,9 @@ footer #adminLink:hover {
   padding: 8px;
 }
 
+
+/* IMAGE BLOCK */
+
 #newArticle form #edition #sheet .imageBlock {
   width: 100%;
   position: relative;
@@ -684,8 +717,6 @@ footer #adminLink:hover {
   width: 100%;
   border-radius:6px;
 }
-
-/* IMAGE BLOCK */
 
 #newArticle form #edition #sheet .imageBlock label {
   display: flex;
@@ -742,6 +773,31 @@ footer #adminLink:hover {
   background-color: #FF4747
 }
 
+/* H2 BLOCK */
+
+#newArticle form #edition #sheet .h2Block {
+  color: #202020;
+  height: 40px;
+  width: 100%;
+  position: relative;
+  display: none;
+}
+
+#newArticle form #edition #sheet .h2Block input {
+  border-style: solid;
+  border-color: rgb(216, 216, 216);
+  border-bottom-color: #202020;
+  border-width: 1px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  padding: 8px;
+}
+
 /* ACTION BUTTON BLOCK */
 
 #newArticle #actionButtonBlock {
@@ -776,6 +832,10 @@ footer #adminLink:hover {
   background-color: #FFDE9B;
 }
 
+#newArticle #actionButtonBlock #addH2Button {
+  background-color: #D49BFF;
+}
+
 
 
 #newArticle #actionButtonBlock #addImageButton:hover {
@@ -785,6 +845,11 @@ footer #adminLink:hover {
 #newArticle #actionButtonBlock #addTextButton:hover {
   background-color: #78CBFC;
 }
+
+#newArticle #actionButtonBlock #addH2Button:hover {
+  background-color: #C475FF;
+}
+
 
 #newArticle form #postArticleSubmit {
   background-color: #4E7EFF;
@@ -1014,12 +1079,22 @@ footer #adminLink:hover {
 }
 
 #articleBody #sheet h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: normal;
 }
 
+#articleBody #sheet h2 {
+  font-size: 18px;
+  font-weight: normal;
+  width:100%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #202020;
+  padding-bottom: 10px;
+}
+
 #articleBody #sheet p {
-  font-size: 16px;
+  font-size: 14px;
   color:#666;
   width: 100%;
 }
@@ -1035,18 +1110,18 @@ footer #adminLink:hover {
   align-self: flex-end;
   display: flex;
   align-items: center;
-  background-color: white;
+  /* background-color: white; */
   /* border:solid 1px #aaa; */
-  padding:10px 20px;
+  padding:10px 0 10px 0 ;
   margin: 20px 0 0 0;
+  margin-bottom:-30px;
 }
 
 #articleBody #sheet #authorBlock #authorImageContainer {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   border-radius:50%;
   overflow: hidden;
-
 }
 
 #articleBody #sheet #authorBlock #authorImageContainer img {
@@ -1054,10 +1129,22 @@ footer #adminLink:hover {
   width: 100%;
 }
 
-#articleBody #sheet #authorBlock p {
-  padding: 0 20px;
+#articleBody #sheet #authorBlock #authorInfoBlock {
+  padding: 0 0 0 20px;
   width:auto;
+  display: flex;
+  flex-direction: column;
 }
+
+#articleBody #sheet #authorBlock #authorInfoBlock p:first-child {
+  color:#202020;
+}
+
+#articleBody #sheet #authorBlock #authorInfoBlock p:last-child {
+  color:#666;
+}
+
+
 
 /*************************************************************/
 

@@ -13,7 +13,7 @@ var editionBlockTop = editionBlock.position().top;
 
 //Init sticky buttons position
 stickyButtonsBlock.css("top", editionBlockTop);
-stickyButtonsBlock.css("left", "20px");
+stickyButtonsBlock.css("left", editionBlock.position().left - stickyButtonsBlock.width() - 10);
 
 var isFixed = false;
 var informationsFormBlock = $('#newArticle #informationsForm');
@@ -24,6 +24,7 @@ $(window).resize(function () {
   if (!isFixed) {
     editionBlockTop = editionBlock.position().top;
     stickyButtonsBlock.css("top", editionBlockTop);
+    stickyButtonsBlock.css("left", editionBlock.position().left - stickyButtonsBlock.width() - 10);
   }
 });
 
@@ -50,7 +51,7 @@ $(window).scroll(function () {
     //set sticky properties
     stickyButtonsBlock.css("position", "fixed");
     stickyButtonsBlock.css("top", parseInt(informationsFormBlock.css("margin-bottom")) + $("header").height());
-    stickyButtonsBlock.css("left", "20px");
+    stickyButtonsBlock.css("left", editionBlock.position().left - stickyButtonsBlock.width() - 10);
     //console.log(stickyButtonsBlock.css("position"));
     isFixed = true;
   } else {
@@ -69,7 +70,7 @@ var lastClickedDiv = null;
 var currentFocusedTextArea = null;
 var lastClickedDivId = 0;
 $('#newArticle form #edition #sheet').on("click", '.addTextBlock', function () {
-
+  makeReappearaddH2Div();
   makeReappearaddTextDiv();
 
   //console.log($(this));
@@ -88,6 +89,7 @@ $('#newArticle form #edition #sheet').on("mousedown", '.textBlock textarea', fun
   if ($(this).parent().attr('id').split('_')[1] != lastClickedDivId) {
     currentFocusedTextArea.blur();
   }
+  makeReappearaddH2Div();
   makeReappearaddTextDiv();
   lastClickedDivId = $(this).parent().attr('id').split('_')[1];
   currentFocusedTextArea = $('#textBlock_' + lastClickedDivId).find('textarea');
@@ -156,22 +158,87 @@ function previewImage(input, imageBlockId) {
 };
 
 /*
+    H2 BLOCK
+*/
+
+var currentFocusedInput = null;
+
+$('#newArticle form #edition #sheet').on("click", '.addH2Block', function () {
+
+  makeReappearaddH2Div();
+  makeReappearaddTextDiv();
+
+  // console.log($(this));
+
+  lastClickedDiv = $(this);
+  var h2BlockId = $(this).attr('id').split('_')[1];
+  lastClickedDivId = h2BlockId;
+
+  $(this).css("display", "none");
+  $('#h2Block_' + h2BlockId).css("display", "inline");
+
+  currentFocusedInput = $('#h2Block_' + h2BlockId).find('input');
+  currentFocusedInput.focus();
+  // console.log('cliked : '+lastClickedDivId);
+});
+
+$('#newArticle form #edition #sheet').on("mousedown", '.h2Block input', function () {
+  if ($(this).parent().attr('id').split('_')[1] != lastClickedDivId) {
+    currentFocusedInput.blur();
+  }
+  makeReappearaddH2Div();
+  makeReappearaddTextDiv();
+  lastClickedDivId = $(this).parent().attr('id').split('_')[1];
+  currentFocusedInput = $('#h2Block_' + lastClickedDivId).find('input');
+  // console.log("click in input ! "+lastClickedDivId);
+});
+
+$(document).on("click", function () {
+  makeReappearaddH2Div();
+});
+
+//Au clique du bouton "ajouter un h2", ajoute un bloc h2 
+$("#newArticle #actionButtonBlock #addH2Button").click(function () {
+  var newId = $('#newArticle form #edition #sheet .addH2Block').length + 1;
+  // console.log("newiD : ",newId);
+  $("#newArticle form #edition #sheet").append("<div class='addH2Block' id='addH2Block_" + newId + "'><svg xmlns='http://www.w3.org/2000/svg' viewBox='8842.593 -2291.594 64.786 53.594'><g id='h2' transform='translate(8842 -2338.26)'><path id='Tracé_28' data-name='Tracé 28' class='cls-1' d='M2.593-21.167H6.257V-5.786H24.929V-21.167h3.665V15.5H24.929V-2.2H6.257V15.5H2.593ZM38.965-9.7H35.45a12.592,12.592,0,0,1,3.627-8.907,11.658,11.658,0,0,1,8.588-3.483,10.822,10.822,0,0,1,8.189,3.267,10.774,10.774,0,0,1,3.129,7.706,12.014,12.014,0,0,1-1.492,5.849A42.1,42.1,0,0,1,51.7,2.127l-9.135,9.837H59.481V15.5h-24.9L48.587.362a45.243,45.243,0,0,0,5.547-6.774,9.118,9.118,0,0,0,1.284-4.653,7.16,7.16,0,0,0-2.306-5.327,7.809,7.809,0,0,0-5.646-2.233,7.907,7.907,0,0,0-5.846,2.343A10.074,10.074,0,0,0,38.965-9.7Z' transform='translate(-2 68.757)'/><path id='Tracé_29' data-name='Tracé 29' class='cls-1' d='M0,112.189H64.379v4.024H0Zm0,8.047H44.26v4.024H0Z' transform='translate(1 -24)'/></g></svg><p>Sub Title</p><button type='button' class='deleteButton'>x</button></div><div class='h2Block' id='h2Block_"+newId+"'><input type='text' name='subtitleInput"+newId+"'/><button type='button' class='deleteButton'>x</button></div>");
+});
+
+
+function makeReappearaddH2Div() {
+  // console.log('reappearition ? '+lastClickedDivId);
+  if (currentFocusedInput != null && !currentFocusedInput.is(":focus") && currentFocusedInput.val() == "") {
+    //console.log("make reappear the div bro !");
+    $('#h2Block_' + lastClickedDivId).css("display", "none");
+    $('#addH2Block_' + lastClickedDivId).css("display", "flex");
+  }
+}
+
+/*
     DELETE BUTTON
 */
 $("#newArticle form #edition #sheet").on("click", '.deleteButton', function () {
-  var deletedDivId = $(this).parent().attr("id");
-  if (deletedDivId != undefined && (deletedDivId.includes("textBlock") || deletedDivId.includes("addTextBlock"))) {
-    deletedDivId = deletedDivId.split('_')[1];
+  //If it's a text
+  if(($(this).parent().attr("class") != undefined && $(this).parent().attr("class").includes("textBlock")) || ($(this).parent().attr("class") != undefined && $(this).parent().attr("class").includes("addTextBlock"))){
+    // console.log("you try to delete a text")
+    const deletedDivId = $(this).parent().attr("id").split('_')[1]
     $("#textBlock_" + deletedDivId).remove();
     $("#addTextBlock_" + deletedDivId).remove();
-  } else {
-    if ($(this).parent().attr("class") != undefined && $(this).parent().attr("class").includes("imageBlock")) {
+  }else if(($(this).parent().attr("class") != undefined && $(this).parent().attr("class").includes("imageBlock")) || ($(this).parent().parent().attr("class") != undefined && $(this).parent().parent().attr("class").includes("addImageBlock"))){
+    // console.log("you try to delete an image")
+    let deletedDivId = -1;
+    if($(this).parent().attr("class") != undefined){
       deletedDivId = $(this).parent().attr("id").split('_')[1];
-    } else {
+    }else{
       deletedDivId = $(this).parent().parent().attr("id").split('_')[1];
     }
     $("#imageBlock_" + deletedDivId).remove();
     $("#addImageBlock_" + deletedDivId).remove();
+  }else if(($(this).parent().attr("class") != undefined && $(this).parent().attr("class").includes("h2Block")) || ($(this).parent().attr("class") != undefined && $(this).parent().attr("class").includes("addH2Block"))){
+    // console.log("you try to delete an h2")
+    const deletedDivId = $(this).parent().attr("id").split('_')[1]
+    $("#h2Block_" + deletedDivId).remove();
+    $("#addH2Block_" + deletedDivId).remove();
   }
 });
 
@@ -191,6 +258,8 @@ $("#newArticle form #postArticleSubmit").on("click", function () {
   $author = $authorInput.val();
   $date = $dateInput.val();
 
+  //Test if there is a value in inputs
+
   $anInputIsNotCompleted = false;
   if ($title.trim() == '') {
     $anInputIsNotCompleted = true;
@@ -205,23 +274,33 @@ $("#newArticle form #postArticleSubmit").on("click", function () {
     $dateInput.css('background-color', '#FF4747');
   }
 
+  // if all inputs are completed
   if (!$anInputIsNotCompleted) {
     articleDatas.push($title);
     articleDatas.push($author);
     articleDatas.push($date);
     console.log($('#newArticle form #informationsForm input[name="articleDate"]').val());
-    //Récupération de tout les éléments.
+
+    //Récupération de tout les éléments de l'article
     var articleContent = new Array();
 
     $("#newArticle form #edition #sheet>*").each(function (index) {
       if ($(this).attr('class') != undefined && $(this).attr('class') == 'textBlock' && $(this).find('textarea').val().trim() != '') {
+        // TEXT
         $text = $(this).find('textarea').val();
         console.log(index + " - text :: " + $text);
         $oneContent = ['text', $(this).find('textarea').val()];
         articleContent.push($oneContent);
       } else if ($(this).attr('class') != undefined && $(this).attr('class') == 'imageBlock' && $(this).find('img')[0].src.includes('#') == false) {
+        // IMAGE
         console.log(index + ' - image : ' + $(this).find('img')[0].src);
         $oneContent = ['image', $(this).find('img')[0].src];
+        articleContent.push($oneContent);
+      } else if ($(this).attr('class') != undefined && $(this).attr('class') == 'h2Block' && $(this).find('input').val().trim() != ''){
+        // H2
+        $text = $(this).find('input').val();
+        console.log(index + " - h2 :: " + $text);
+        $oneContent = ['h2', $(this).find('input').val()];
         articleContent.push($oneContent);
       }
     });

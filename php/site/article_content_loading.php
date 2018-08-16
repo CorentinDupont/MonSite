@@ -24,6 +24,8 @@ if (mysqli_num_rows($result) > 0) {
             echo '<p>'.$row['Texte_Contenu_Article'].'</p>';
         }elseif($row['Type_Contenu_Article']=='image'){
             echo '<img src="'.$row['Texte_Contenu_Article'].'"/>';
+        }elseif($row['Type_Contenu_Article']=='h2'){
+          echo '<h2>'.$row['Texte_Contenu_Article'].'</h2>';
         }
     }
 } else {
@@ -39,6 +41,9 @@ echo'<article id="authorBlock">
         <div id="authorImageContainer">
             <img src="../../images/CorentinDupontPhotoProfil_bg_light_blue.png"/>
         </div>
-        <p>'.$allArticleDatas[2].', '.$realDate.'</p>
+        <div id="authorInfoBlock">
+          <p>'.$allArticleDatas[2].'</p>
+          <p>'.$realDate.'</p>
+        </div>
     </article>';
 ?>
