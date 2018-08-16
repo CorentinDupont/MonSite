@@ -136,10 +136,17 @@ footer #links {
 
 footer #links a {
   height:40px;
-  margin: 0 5px;
+  margin:10px 0;
 }
+
 footer #links a svg{
   height:100%;
+  fill:white;
+  width:20px;
+}
+
+footer #links a:hover svg{
+  fill:#9BB6FF;
 }
 
 footer p {
