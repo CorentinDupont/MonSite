@@ -7,7 +7,7 @@ var stickyButtonTop = stickyButton.scrollTop();
 var listArticle= $('#deleteArticle #listArticle');
 var listArticleTop = listArticle.position().top;
 stickyButton.css("top", listArticleTop);
-stickyButton.css("left", "2.5vw");
+stickyButton.css("left", "250px");
 var isFixed =false;
 var searchBlock = $('#deleteArticle #searchBlock');
 
@@ -26,11 +26,11 @@ $(window).scroll(function(){
         
     }
     stickyButtonTop = stickyButton.position().top;
-    var positionToStick = listArticleTop - parseInt(searchBlock.css("margin-bottom"));
+    var positionToStick = listArticleTop - parseInt(searchBlock.css("margin-bottom")) - $("header").height();
     if(scroll >= positionToStick){
         stickyButton.css("position","fixed");
-        stickyButton.css("top",parseInt(searchBlock.css("margin-bottom")));
-        stickyButton.css("left","2.5vw");
+        stickyButton.css("top",parseInt(searchBlock.css("margin-bottom")) + $("header").height());
+        stickyButton.css("left","250px");
         isFixed = true;
     }else{
         stickyButton.css("position","absolute");
