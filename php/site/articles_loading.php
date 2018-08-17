@@ -12,7 +12,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM article ORDER BY Date_Article";
+$sql = "SELECT * FROM article ORDER BY Date_Article DESC";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
